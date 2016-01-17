@@ -7,6 +7,7 @@ import json
 import requests
 
 from .blueprint import Blueprint
+from .bootstrap import Bootstrap
 from .cluster import Cluster
 from .host import Host
 from .repo import Repo
@@ -36,6 +37,7 @@ class Client:
         self.debug = debug
 
         self.blueprint = Blueprint(self)
+        self.bootstrap = Bootstrap(self)
         self.cluster = Cluster(self)
         self.host = Host(self)
         self.repo = Repo(self)
